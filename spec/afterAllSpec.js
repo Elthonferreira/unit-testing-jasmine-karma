@@ -16,8 +16,4 @@ describe("Teste do afterAll", function () {
 		expect(contador).toEqual(10);
 	});
 
-	/* it("Deve garantir valor 12 para o contator", function () {
-		console.log("Teste 1: " + contador);
-		expect(contador).toEqual(12);
-	}); */ // MESMO ERRO, ACESSANDO TESTE DE BAIXO ANTES DO DE CIMA AS VEZES
 });

@@ -11,11 +11,10 @@ describe("Teste do beforeEach", function () {
 		expect(contador).toEqual(1);
 	});
 
-	/* it("Deve incrementar o contator para 2", function () {
+	xit("Deve incrementar o contator para 2", function () {
 		console.log("Teste 2: " + contador);
 		expect(contador).toEqual(2);
-	}); */
-	// COMENTEI PORQUE ESTAVA COM ERRO
+	}); 
 
 	// Estranho porque as vezes executa o teste 2 antes do teste 1
 });
