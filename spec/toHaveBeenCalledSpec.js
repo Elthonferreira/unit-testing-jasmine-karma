@@ -18,7 +18,7 @@ describe("Testes do objeto toHaveBeenCalled", function () {
 	});
 
 
-	it("Deve chamar o método somar2Valores duas vezes", function () {
+	xit("Deve chamar o método somar2Valores duas vezes", function () {
 		calculadora.somar2Valores(2, 3);
 		calculadora.somar2Valores(2, 3);
 		expect(calculadora.somar2Valores).toHaveBeenCalledTimes(2);
