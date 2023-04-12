@@ -1,18 +1,21 @@
-describe("Testes do objeto Spy", function () {
+describe("Testes do objeto jasmine.createSpy e Obj", function () {
 
-	var calculadora = {
-		somar2Valores: function (n1, n2) {
-			return n1 + n2;
-		}, 
-	};
+	var somar;			// createSpy
+	var Calculadora;	// createSpyObj
 
 	beforeAll(function () { // executa antes de TODOS testes
-		spyOn(calculadora, "somar2Valores"); 
+		somar = jasmine.createSpy("somar");
+		Calculadora = jasmine.createSpyObj("Calculadora", ["somar", "subtrair"]);
+
+		Calculadora.somar.and.returnValue(5);
 	});
 
 
-	it("Deve possuir o método somar2Valores como não definido", function () {
+	it("Deve demonstar o uso do jasmine.createSpy e Obj", function () {
+		var retorno = Calculadora.somar(1, 2);
 
-		expect(calculadora.somar2Valores(1, 2)).toBeUndefined(); // método ficou não definido por conta do spy
+		expect(Calculadora.somar).toHaveBeenCalled(); 
+		expect(Calculadora.somar).toHaveBeenCalledWith(1, 2); 
+		expect(retorno).toEqual(5);
 	});
 });
