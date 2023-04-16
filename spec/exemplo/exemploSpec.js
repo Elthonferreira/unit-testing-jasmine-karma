@@ -7,4 +7,8 @@ describe("Suite de teste de exemplo com NodeJS", function () {
 	it("Deve demonstrar o uso do Karma em modo de escuta", function () {
 		expect(1).toEqual(1);
 	});
+
+	it("Deve demonstrar o uso do Karma em modo de escuta", function () {
+		expect(3).toEqual(2+1);
+	});
 });
